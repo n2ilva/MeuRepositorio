@@ -1,8 +1,9 @@
+import PageContainer from "./PageContainer";
+
 export default function Linguagens() {
     return (
-        <div>
-            <h1>Linguagens</h1>
-            <p>Minhas linguagens de programação.</p>
-        </div>
+        <PageContainer title="Linguagens">
+            <p>Minhas linguagens de programação e tecnologias.</p>
+        </PageContainer>
     );
 }

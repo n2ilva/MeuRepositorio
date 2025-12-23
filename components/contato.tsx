@@ -1,8 +1,9 @@
+import PageContainer from "./PageContainer";
+
 export default function Contato() {
     return (
-        <div>
-            <h1>Contato</h1>
+        <PageContainer title="Contato">
             <p>Entre em contato comigo.</p>
-        </div>
+        </PageContainer>
     );
 }

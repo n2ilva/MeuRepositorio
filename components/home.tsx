@@ -1,8 +1,13 @@
+import PageContainer from "./PageContainer";
+
 export default function Home() {
     return (
-        <div>
-            <h1>Início</h1>
+        <PageContainer title="Início">
             <p>Bem-vindo ao meu portfólio!</p>
-        </div>
+            <p>
+                Sou desenvolvedor Full Stack apaixonado por criar soluções
+                tecnológicas que fazem a diferença.
+            </p>
+        </PageContainer>
     );
 }
