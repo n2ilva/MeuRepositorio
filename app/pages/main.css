@@ -134,3 +134,131 @@
   background: var(--color-primary-hover);
   transform: translateY(-2px);
 }
+
+/* ========================================
+   MOBILE RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet e abaixo */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .main-container > .row {
+    flex-direction: column-reverse !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* Sidebar vira barra inferior fixa */
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    z-index: 1000;
+    border-right: none;
+    border-top: 1px solid var(--color-border-light);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    background: var(--color-bg-darker);
+  }
+
+  .sidebar-content {
+    min-height: auto !important;
+    flex-direction: row !important;
+    padding: 0 !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ocultar perfil no mobile */
+  .profile-section {
+    display: none !important;
+  }
+
+  /* Menu horizontal */
+  .sidebar #menu {
+    flex-direction: row !important;
+    width: auto !important;
+    gap: 0;
+    padding: 8px 0;
+  }
+
+  .nav-menu-item {
+    margin-bottom: 0 !important;
+  }
+
+  .nav-menu-link {
+    flex-direction: column;
+    padding: 10px 20px !important;
+    gap: 4px;
+    border-radius: 12px !important;
+  }
+
+  .nav-menu-link i {
+    font-size: 1.3rem !important;
+  }
+
+  /* Labels dos menus ocultos no mobile */
+  .nav-menu-link span {
+    display: none !important;
+  }
+
+  /* Botão de download desktop oculto no mobile */
+  .download-desktop {
+    display: none !important;
+  }
+
+  /* Estilo do botão download na navbar mobile */
+  .download-nav-link {
+    color: var(--color-primary) !important;
+  }
+
+  .download-nav-link:hover {
+    background: rgba(13, 110, 253, 0.2) !important;
+  }
+
+  /* Área de conteúdo com padding inferior para não ficar atrás do menu */
+  .content-area {
+    padding-bottom: 90px !important;
+    min-height: calc(100vh - 70px);
+  }
+
+  .content-card {
+    min-height: auto;
+  }
+}
+
+/* Ocultar botão download da navbar no desktop */
+.download-nav-item {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .download-nav-item {
+    display: block;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .content-area {
+    padding: 12px !important;
+    padding-bottom: 90px !important;
+  }
+
+  .content-card {
+    padding: 16px !important;
+    border-radius: 16px !important;
+  }
+
+  .nav-menu-link {
+    padding: 10px 16px !important;
+  }
+
+  .nav-menu-link i {
+    font-size: 1.2rem !important;
+  }
+}

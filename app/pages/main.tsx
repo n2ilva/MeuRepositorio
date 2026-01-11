@@ -68,13 +68,27 @@ export default function Main() {
                                     onClick={handleNavigation}
                                 />
                             ))}
+                            
+                            {/* Botão Download para Mobile (aparece na navbar) */}
+                            <li className="nav-item mb-2 nav-menu-item download-nav-item">
+                                <a
+                                    href="https://drive.google.com/uc?export=download&id=17p9LjgR_Q38dc1SRoMMPRBsP5QC_8foO"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="nav-link d-flex align-items-center rounded-3 px-3 py-2 nav-menu-link download-nav-link"
+                                >
+                                    <i className="bi bi-file-earmark-arrow-down fs-5"></i>
+                                    <span className="ms-2 d-none d-sm-inline">Currículo</span>
+                                </a>
+                            </li>
                         </ul>
 
-                        {/* Botão Download Currículo */}
-                        <div className="mt-auto w-100 pt-3 pb-4">
+                        {/* Botão Download Currículo (Desktop) */}
+                        <div className="mt-auto w-100 pt-3 pb-4 download-desktop">
                             <a
-                                href="/curriculo.PDF"
-                                download="Curriculo_Natanael_Silva.pdf"
+                                href="https://drive.google.com/uc?export=download&id=17p9LjgR_Q38dc1SRoMMPRBsP5QC_8foO"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2 download-btn"
                             >
                                 <i className="bi bi-download"></i>

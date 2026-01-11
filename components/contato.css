@@ -1,0 +1,419 @@
+/* Contato Page Styles - Terminal Theme */
+
+/* Terminal Container */
+.terminal-container {
+    background: #0d0d0d;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(0, 255, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    margin-bottom: 2rem;
+}
+
+/* Terminal Header */
+.terminal-header {
+    background: linear-gradient(180deg, #3d3d3d 0%, #2d2d2d 100%);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-buttons span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.btn-close {
+    background: #ff5f56;
+}
+
+.btn-minimize {
+    background: #ffbd2e;
+}
+
+.btn-maximize {
+    background: #27ca40;
+}
+
+.terminal-title {
+    flex: 1;
+    text-align: center;
+    color: #999;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.terminal-spacer {
+    width: 52px;
+}
+
+/* Terminal Body */
+.terminal-body {
+    padding: 1.5rem;
+    min-height: 400px;
+    max-height: 500px;
+    overflow-y: auto;
+    cursor: text;
+}
+
+.terminal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
+
+/* Terminal Entry */
+.terminal-entry {
+    margin-bottom: 1rem;
+}
+
+/* Input Line */
+.input-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.prompt {
+    display: flex;
+    white-space: nowrap;
+}
+
+.user {
+    color: #27ca40;
+    font-weight: 600;
+}
+
+.at {
+    color: #888;
+}
+
+.host {
+    color: #5eaeff;
+    font-weight: 600;
+}
+
+.colon {
+    color: #888;
+}
+
+.path {
+    color: #c678dd;
+    font-weight: 600;
+}
+
+.dollar {
+    color: #888;
+    margin-left: 4px;
+}
+
+.command {
+    color: #fff;
+}
+
+/* Input Wrapper */
+.input-wrapper {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.terminal-input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    width: 100%;
+    caret-color: transparent;
+}
+
+.cursor {
+    position: absolute;
+    width: 9px;
+    height: 18px;
+    background: #27ca40;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+.cursor.visible {
+    opacity: 0.8;
+}
+
+/* Output Line */
+.output-line {
+    margin-top: 8px;
+    padding-left: 0;
+}
+
+/* Welcome Message */
+.welcome-message {
+    color: #27ca40;
+}
+
+.ascii-art {
+    font-size: 0.55rem;
+    line-height: 1.2;
+    color: #27ca40;
+    margin: 0;
+    overflow-x: auto;
+}
+
+.welcome-text {
+    margin: 1rem 0 0.5rem;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.highlight {
+    color: #5eaeff;
+    font-weight: 600;
+}
+
+.welcome-hint {
+    color: #666;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.cmd-highlight {
+    color: #ffbd2e;
+    background: rgba(255, 189, 46, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Help Output */
+.help-output {
+    color: #ccc;
+}
+
+.section-title {
+    color: #5eaeff;
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+}
+
+.commands-grid {
+    display: grid;
+    gap: 8px;
+}
+
+.command-item {
+    display: flex;
+    gap: 16px;
+    padding: 4px 0;
+}
+
+.cmd-name {
+    color: #27ca40;
+    font-weight: 600;
+    min-width: 100px;
+}
+
+.cmd-name::before {
+    content: '> ';
+    color: #666;
+}
+
+.cmd-desc {
+    color: #888;
+}
+
+/* Contact Output */
+.contact-output {
+    display: flex;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--contact-color);
+    text-decoration: none;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.contact-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--contact-color);
+    transform: translateX(5px);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--contact-color) 20%, transparent);
+}
+
+.contact-link i {
+    font-size: 1.1rem;
+}
+
+.contact-link .arrow-icon {
+    font-size: 0.8rem;
+    opacity: 0;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover .arrow-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* All Contacts */
+.all-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.all-contacts .section-title {
+    margin-bottom: 8px;
+}
+
+/* Error Output */
+.error-output {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.error-text {
+    color: #ff5f56;
+}
+
+.error-cmd {
+    color: #ffbd2e;
+}
+
+.error-hint {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Quick Links */
+.quick-links {
+    margin-top: 1.5rem;
+}
+
+.quick-title {
+    color: var(--color-text-secondary);
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+}
+
+.quick-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.quick-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: var(--btn-color);
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.quick-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--btn-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
+                0 0 20px color-mix(in srgb, var(--btn-color) 30%, transparent);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .terminal-body {
+        padding: 1rem;
+        min-height: 350px;
+    }
+
+    .ascii-art {
+        font-size: 0.4rem;
+    }
+
+    .input-line {
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+    }
+
+    .command-item {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .cmd-name {
+        min-width: auto;
+    }
+
+    .contact-link {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+
+    .quick-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .terminal-header {
+        padding: 10px 12px;
+    }
+
+    .terminal-title {
+        font-size: 0.75rem;
+    }
+
+    .ascii-art {
+        display: none;
+    }
+
+    .welcome-message .welcome-text {
+        margin-top: 0;
+    }
+
+    .prompt {
+        font-size: 0.8rem;
+    }
+}

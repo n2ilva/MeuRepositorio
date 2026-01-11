@@ -1,9 +1,9 @@
 // Configurações do Perfil
 export const profile = {
-    name: "Natanael Silva",
+    name: "Natanael Ramos",
     role: "Desenvolvedor Full Stack",
     photo: "/photo.jpg",
-    photoAlt: "Foto de perfil - Natanael Silva"
+    photoAlt: "Foto de perfil - Natanael Ramos"
 };
 
 // Configurações do Menu de Navegação
@@ -44,6 +44,6 @@ export const menuItems: MenuItem[] = [
 // Configurações de Redes Sociais (para uso futuro)
 export const socialLinks = {
     github: "https://github.com/n2ilva",
-    linkedin: "",
-    email: ""
+    linkedin: "https://www.linkedin.com/in/natanael2ilva",
+    email: "natanaelsantos_silva@outlook.com"
 };
