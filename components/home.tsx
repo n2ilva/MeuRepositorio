@@ -2,6 +2,15 @@
 import { useEffect, useState } from "react";
 import "./home.css";
 
+// Objeto centralizado de experiência
+const EXPERIENCE = {
+    infraYears: 6,
+    devYears: 1,
+    get totalYears() {
+        return this.infraYears + this.devYears;
+    }
+};
+
 const roles = [
     "Desenvolvedor Full Stack",
     "Desenvolvedor Web",
@@ -16,25 +25,25 @@ const techStack = [
     { nome: "Next.js", icone: "devicon-nextjs-plain", cor: "#ffffff" },
     { nome: "React", icone: "devicon-react-original", cor: "#61DAFB" },
     { nome: "React Native", icone: "devicon-react-original", cor: "#61DAFB" },
-    { nome: "Angular", icone: "devicon-angular-plain", cor: "#D9263A" },
+    { nome: "Tailwind CSS", icone: "devicon-tailwindcss-plain", cor: "#06B6D4" },
 ];
 
 const experiencias = [
     {
         area: "Infraestrutura de TI",
-        tempo: "6 anos",
+        tempo: `${EXPERIENCE.infraYears} anos`,
         icone: "bi-hdd-network-fill",
         cor: "#6366f1",
-        descricao: "Cisco, Fortigate, Dell",
-        tags: ["Redes", "Segurança", "Servidores"]
+        descricao: "Gerenciamento de Servidores AD e BD • Configuração de Switches, Roteadores e Firewalls Cisco/Fortigate • Implementação de Access Points e Controllers • Configuração de Telefonia IP • Administração de Políticas de Backup",
+        tags: ["Redes", "Segurança", "Servidores", "Telefonia", "Backup"]
     },
     {
         area: "Desenvolvimento",
-        tempo: "1 ano",
+        tempo: `${EXPERIENCE.devYears} ano`,
         icone: "bi-code-slash",
         cor: "#22c55e",
-        descricao: "Web & Mobile",
-        tags: ["Frontend", "Backend", "Mobile"]
+        descricao: "Desenvolvimento de aplicações Web e Mobile com React, React Native e Next.js • Integração com Firebase e Supabase • Implementação de autenticação e sincronização em tempo real • Criação de plataformas educacionais e ferramentas interativas",
+        tags: ["React", "React Native", "Next.js", "Firebase", "TypeScript"]
     }
 ];
 
@@ -90,9 +99,9 @@ export default function Home() {
                     </div>
 
                     <p className="hero-description">
-                        Profissional com <strong>7 anos de experiência</strong> em tecnologia, 
-                        combinando sólida expertise em infraestrutura de TI com desenvolvimento 
-                        de aplicações web e mobile modernas.
+                        Experiência sólida em <strong>infraestrutura de TI com 6 anos de atuação</strong>, 
+                        agora focado nos estudos de desenvolvimento web e mobile para me tornar um 
+                        <strong> desenvolvedor Full Stack</strong> completo.
                     </p>
                 </div>
 
@@ -179,15 +188,15 @@ export default function Home() {
             {/* Stats Section */}
             <section className="stats-section">
                 <div className="stat-card">
-                    <span className="stat-number">8+</span>
+                    <span className="stat-number">{EXPERIENCE.totalYears}+</span>
                     <span className="stat-label">Anos em TI</span>
                 </div>
                 <div className="stat-card">
-                    <span className="stat-number">7</span>
+                    <span className="stat-number">{EXPERIENCE.infraYears}</span>
                     <span className="stat-label">Anos Infraestrutura</span>
                 </div>
                 <div className="stat-card">
-                    <span className="stat-number">1</span>
+                    <span className="stat-number">{EXPERIENCE.devYears}</span>
                     <span className="stat-label">Ano Desenvolvimento</span>
                 </div>
                 <div className="stat-card">

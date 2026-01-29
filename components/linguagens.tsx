@@ -55,9 +55,9 @@ const tecnologias: Tecnologia[] = [
         categoria: "framework"
     },
     {
-        nome: "Angular",
-        icone: "devicon-angularjs-plain",
-        cor: "#DD0031",
+        nome: "Tailwind CSS",
+        icone: "devicon-tailwindcss-plain",
+        cor: "#06B6D4",
         descricao: "Framework completo para aplicações web enterprise. TypeScript nativo, injeção de dependências e arquitetura robusta.",
         categoria: "framework"
     },
@@ -69,17 +69,17 @@ const tecnologias: Tecnologia[] = [
         categoria: "framework"
     },
     {
-        nome: "SQL",
-        icone: "devicon-azuresqldatabase-plain",
-        cor: "#00758F",
-        descricao: "Linguagem padrão para bancos de dados relacionais. Permite consultar, manipular e gerenciar dados estruturados.",
+        nome: "Firebase",
+        icone: "devicon-firebase-plain",
+        cor: "#FFCA28",
+        descricao: "Plataforma do Google para desenvolvimento de aplicativos. Oferece autenticação, banco de dados em tempo real, storage e hospedagem.",
         categoria: "banco"
     },
     {
-        nome: "NoSQL",
-        icone: "devicon-mongodb-plain",
-        cor: "#47A248",
-        descricao: "Bancos de dados não-relacionais como MongoDB. Flexibilidade de esquema e alta escalabilidade para dados não estruturados.",
+        nome: "Supabase",
+        icone: "devicon-supabase-plain",
+        cor: "#3ECF8E",
+        descricao: "Alternativa open-source ao Firebase. PostgreSQL como backend, autenticação, storage e APIs em tempo real.",
         categoria: "banco"
     },
     {

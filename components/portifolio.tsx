@@ -4,6 +4,12 @@ import Image from "next/image";
 import PageContainer from "./PageContainer";
 import "./portifolio.css";
 
+// Helper para corrigir caminho de imagens no GitHub Pages
+const getImagePath = (path: string) => {
+    const basePath = process.env.NODE_ENV === 'production' ? '/MeuPortifolio' : '';
+    return `${basePath}${path}`;
+};
+
 interface Projeto {
     id: string;
     nome: string;
@@ -30,7 +36,7 @@ const projetos: Projeto[] = [
         descricao: "Ferramenta web intuitiva inspirada no Canva e PowerPoint, projetada para automatizar a criação de portfólios e apresentações. Focado em educadores, oferece integração direta com Google Fotos e Google Drive, templates personalizáveis, interface drag-and-drop, e exportação versátil em MP4 (com trilha sonora) ou PDF.",
         imagem: "/portfolio-maker.png",
         link: "https://portifoliomaker.netlify.app/",
-        tecnologias: ["TypeScript", "Node.js", "Angular"]
+        tecnologias: ["TypeScript", "Angular", "Supabase"]
     },
     {
         id: "sara-ramos",
@@ -38,7 +44,7 @@ const projetos: Projeto[] = [
         descricao: "Plataforma educacional completa desenvolvida para Sara Ramos, educadora infantil. Oferece uma loja virtual com atividades pedagógicas prontas para uso, e-books e videoaulas exclusivas. Conta também com uma seção gratuita de jogos educativos interativos para estimular o aprendizado infantil.",
         imagem: "/sara-ramos.png",
         link: "https://sararamos.com.br/",
-        tecnologias: ["TypeScript", "Node.js", "Next.js", "React"]
+        tecnologias: ["TypeScript", "Next.js", "React", "Firebase"]
     }
 ];
 
@@ -100,7 +106,7 @@ export default function Portifolio() {
                         >
                             <div className="projeto-imagem-wrapper">
                                 <Image
-                                    src={projeto.imagem}
+                                    src={getImagePath(projeto.imagem)}
                                     alt={`Preview do projeto ${projeto.nome}`}
                                     className="projeto-imagem"
                                     fill
